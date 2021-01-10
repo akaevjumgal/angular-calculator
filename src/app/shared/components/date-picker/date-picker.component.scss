@@ -1,0 +1,46 @@
+.date-picker {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    color: var(--theme-text-secondary);
+    font-size: var(--space-sm);
+  }
+  &__prefix {
+    border: 1px solid var(--theme-border);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    height: 42px;
+    box-sizing: border-box;
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 42px;
+    background-color: var(--theme-secondary);
+    color: var(--theme-text-tertiary);
+    cursor: pointer;
+  }
+  &__next {
+    border-radius: 4px 0 0 4px;
+    width: 13%;
+  }
+  &__previous {
+    border-radius: 0 4px 4px 0;
+    width: 13%;
+  }
+}
+
+:host ::ng-deep {
+  input {
+    width: 74%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: var(--space-unit);
+    text-align: center;
+  }
+}

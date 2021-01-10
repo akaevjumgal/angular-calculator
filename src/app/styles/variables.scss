@@ -1,0 +1,20 @@
+:root {
+  // themes
+  --theme-primary: #2F80ED;
+  --theme-secondary: #F4F8FA;
+  --theme-text-secondary: #102C51;
+  --theme-text-tertiary: #828282;
+  --theme-border: #CFCFCF;
+  --theme-disabled: #BDBDBD;
+
+  // units
+  --space-unit: 1em;
+  // spacings
+  --space-xxs: calc(0.25 * var(--space-unit));
+  --space-xs:  calc(0.5 * var(--space-unit));
+  --space-sm:  calc(0.75 * var(--space-unit));
+  --space-md:  calc(1.25 * var(--space-unit));
+  --space-lg:  calc(2 * var(--space-unit));
+  --space-xl:  calc(3.25 * var(--space-unit));
+  --space-xxl: calc(5.25 * var(--space-unit));
+}

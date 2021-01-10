@@ -1,0 +1,8 @@
+<div class="date-picker" [className]="className">
+  <span class="date-picker__label">{{ label }}</span>
+  <div class="date-picker__prefix">
+    <div class="date-picker__icon date-picker__previous" (click)="onPrevious()"><</div>
+    <ng-content></ng-content>
+    <div class="date-picker__icon date-picker__next" (click)="onNext()">></div>
+  </div>
+</div>

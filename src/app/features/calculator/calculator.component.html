@@ -1,0 +1,30 @@
+<app-card>
+  <form [formGroup]="deposit" (submit)="submit()">
+    <p class="title">
+      Savings <br>
+      Calculator
+    </p>
+    <app-slide-toggle [label]="settings.label" className="mg-v-sm">
+      <input type="checkbox" formControlName="byTotal">
+    </app-slide-toggle>
+    <app-form-field [label]="deposit.value.byTotal ? ' Total amount' : 'Monthly amount'" className="mg-v-sm">
+      <input formControlName="amount" type="number">
+    </app-form-field>
+    <app-date-picker [label]="settings.dateLabel" className="mg-v-sm" (previous)="previousMonth()" (next)="nextMonth()">
+      <input formControlName="date" type="month">
+    </app-date-picker>
+    <div class="total">
+      <div class="total__computed">
+        <p>{{ deposit.value.byTotal ? 'Monthly' : 'Total' }} amount</p>
+        <b class="total__amount">${{ settings.amountByMonth }}</b>
+      </div>
+      <div class="total__description">
+        <p [innerHTML]="settings.description "></p>
+      </div>
+    </div>
+    <button type="submit" appButton class="mg-t-md" [ngClass]="{ 'disabled': saving }">
+      <span *ngIf="saving" class="loader">loading...</span>
+      <span *ngIf="!saving">Finish</span>
+    </button>
+  </form>
+</app-card>
